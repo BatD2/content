@@ -1,0 +1,376 @@
+id: Anomali_ThreatStream_Test
+version: -1
+fromversion: 3.5.0
+name: Anomali ThreatStream Test
+starttaskid: "0"
+tasks:
+  "0":
+    id: "0"
+    taskid: cc16a1a8-e966-460b-8056-aac54e3515f2
+    type: start
+    task:
+      id: cc16a1a8-e966-460b-8056-aac54e3515f2
+      version: -1
+      name: ""
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "6"
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 50
+        }
+      }
+  "1":
+    id: "1"
+    taskid: fd7db6e3-2385-4d83-8774-ab014d1965cc
+    type: regular
+    task:
+      id: fd7db6e3-2385-4d83-8774-ab014d1965cc
+      version: -1
+      name: threatstream-intelligence (type=ip, value=218.227.212.90)
+      description: To retrieve threat intelligence from the ThreatStream cloud
+      script: Anomali ThreatStream|||threatstream-intelligence
+      type: regular
+      iscommand: true
+      brand: Anomali ThreatStream
+    nexttasks:
+      '#none#':
+      - "2"
+      - "4"
+      - "5"
+    scriptarguments:
+      asn: {}
+      confidence: {}
+      country: {}
+      created_ts: {}
+      expiration_ts: {}
+      feed_id: {}
+      id: {}
+      import_session_ id: {}
+      ip: {}
+      is_public: {}
+      itype: {}
+      latitude: {}
+      limit: {}
+      longitude: {}
+      meta.detail: {}
+      meta.detail2: {}
+      meta.maltype: {}
+      meta.severity: {}
+      modified_ts: {}
+      org: {}
+      owner_ organization_id: {}
+      rdns: {}
+      source_reported_ confidence: {}
+      status: {}
+      tags.name: {}
+      threat_type: {}
+      trusted_circle_ids: {}
+      type:
+        simple: ip
+      update_id: {}
+      value:
+        simple: 218.227.212.90
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 370
+        }
+      }
+  "2":
+    id: "2"
+    taskid: 7408f6a4-8790-4753-88ca-60e70aeaefcf
+    type: regular
+    task:
+      id: 7408f6a4-8790-4753-88ca-60e70aeaefcf
+      version: -1
+      name: ip (176.228.66.70)
+      description: Checks the reputation of the given IP
+      script: Anomali ThreatStream|||ip
+      type: regular
+      iscommand: true
+      brand: Anomali ThreatStream
+    nexttasks:
+      '#none#':
+      - "8"
+    scriptarguments:
+      ip:
+        simple: 176.228.66.70
+      threshold: {}
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 545
+        }
+      }
+  "3":
+    id: "3"
+    taskid: 4cc9bcd7-f27b-44b4-80ef-bcb1886b0fbd
+    type: regular
+    task:
+      id: 4cc9bcd7-f27b-44b4-80ef-bcb1886b0fbd
+      version: -1
+      name: domain (kpanels.in)
+      description: Checks the reputation of the given IP or domain name
+      script: Anomali ThreatStream|||domain
+      type: regular
+      iscommand: true
+      brand: Anomali ThreatStream
+    nexttasks:
+      '#none#':
+      - "9"
+    scriptarguments:
+      domain:
+        simple: kpanels.in
+      threshold: {}
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 895
+        }
+      }
+  "4":
+    id: "4"
+    taskid: ce92b708-ce6d-4dce-887c-6f84b160ebd2
+    type: regular
+    task:
+      id: ce92b708-ce6d-4dce-887c-6f84b160ebd2
+      version: -1
+      name: file (3e5d63b93a68d715f7559f42285223f4)
+      description: Checks the reputation of the given checksum
+      script: Anomali ThreatStream|||file
+      type: regular
+      iscommand: true
+      brand: Anomali ThreatStream
+    nexttasks:
+      '#none#':
+      - "7"
+    scriptarguments:
+      file:
+        simple: 3e5d63b93a68d715f7559f42285223f4
+      threshold: {}
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 545
+        }
+      }
+  "5":
+    id: "5"
+    taskid: 9949f81e-3a07-4272-8c2a-39d3a0a92b0a
+    type: regular
+    task:
+      id: 9949f81e-3a07-4272-8c2a-39d3a0a92b0a
+      version: -1
+      name: threatstream-email-reputation (mailonline_16@filposcv.com)
+      description: Checks the reputation of the given email
+      script: Anomali ThreatStream|||threatstream-email-reputation
+      type: regular
+      iscommand: true
+      brand: Anomali ThreatStream
+    nexttasks:
+      '#none#':
+      - "11"
+    scriptarguments:
+      email:
+        simple: mailonline_16@filposcv.com
+      threshold: {}
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 910,
+          "y": 545
+        }
+      }
+  "6":
+    id: "6"
+    taskid: 0350626f-e2bc-4011-8627-672c67fe1855
+    type: regular
+    task:
+      id: 0350626f-e2bc-4011-8627-672c67fe1855
+      version: -1
+      name: DeleteContext
+      description: Delete field from context
+      scriptName: DeleteContext
+      type: regular
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "1"
+    scriptarguments:
+      all:
+        simple: "yes"
+      key: {}
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 195
+        }
+      }
+  "7":
+    id: "7"
+    taskid: e8cbe5cb-5d7a-4b95-83c1-59d3c5d77433
+    type: regular
+    task:
+      id: e8cbe5cb-5d7a-4b95-83c1-59d3c5d77433
+      version: -1
+      name: VerifyContext (File)
+      description: |+
+        Verify path in context
+        - Verify path existence
+        - If matching object is array - verify fields exists in each object in array
+        - If matching object is not array - verify fields exists in matching object
+        - if 'expectedValue' supplied - ensure that given value equal to context path
+
+      scriptName: VerifyContext
+      type: regular
+      iscommand: false
+      brand: ""
+    scriptarguments:
+      expectedValue: {}
+      fields:
+        simple: MD5, Malicious, Score
+      path:
+        simple: File
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 720
+        }
+      }
+  "8":
+    id: "8"
+    taskid: 255a564c-e2bb-473e-82f5-69ff848b978f
+    type: regular
+    task:
+      id: 255a564c-e2bb-473e-82f5-69ff848b978f
+      version: -1
+      name: VerifyContext (IP)
+      description: |+
+        Verify path in context
+        - Verify path existence
+        - If matching object is array - verify fields exists in each object in array
+        - If matching object is not array - verify fields exists in matching object
+        - if 'expectedValue' supplied - ensure that given value equal to context path
+
+      scriptName: VerifyContext
+      type: regular
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "3"
+    scriptarguments:
+      expectedValue: {}
+      fields:
+        simple: ASN, Address, Geo, Malicious, Score
+      path:
+        simple: IP
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 720
+        }
+      }
+  "9":
+    id: "9"
+    taskid: 54fcfa9e-2a6c-4f02-806e-2c2d19d8d6f0
+    type: regular
+    task:
+      id: 54fcfa9e-2a6c-4f02-806e-2c2d19d8d6f0
+      version: -1
+      name: VerifyContext (Domain)
+      description: |+
+        Verify path in context
+        - Verify path existence
+        - If matching object is array - verify fields exists in each object in array
+        - If matching object is not array - verify fields exists in matching object
+        - if 'expectedValue' supplied - ensure that given value equal to context path
+
+      scriptName: VerifyContext
+      type: regular
+      iscommand: false
+      brand: ""
+    scriptarguments:
+      expectedValue: {}
+      fields:
+        simple: DNS, Name, Score
+      path:
+        simple: Domain
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 1070
+        }
+      }
+  "11":
+    id: "11"
+    taskid: 7bf1a60f-4517-46db-8183-0cbd7049e434
+    type: regular
+    task:
+      id: 7bf1a60f-4517-46db-8183-0cbd7049e434
+      version: -1
+      name: VerifyContext (ThreatStream.EmailReputation)
+      description: |+
+        Verify path in context
+        - Verify path existence
+        - If matching object is array - verify fields exists in each object in array
+        - If matching object is not array - verify fields exists in matching object
+        - if 'expectedValue' supplied - ensure that given value equal to context path
+
+      scriptName: VerifyContext
+      type: regular
+      iscommand: false
+      brand: ""
+    scriptarguments:
+      expectedValue: {}
+      fields:
+        simple: Itype, Created, Modified, Confidence, Details1, Details2, Status,
+          ThreatScore, Source, Id, Email, Severity
+      path:
+        simple: ThreatStream.EmailReputation
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 910,
+          "y": 720
+        }
+      }
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 1115,
+        "width": 1240,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
+inputs: []
+outputs: []

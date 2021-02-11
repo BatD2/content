@@ -1,5 +1,6 @@
 #!/bin/bash
 
+<<<<<<< HEAD
 # usable when running 'git rebase --interactive'
 if [[ $(git branch | grep '*' | sed 's/* //') == '(no branch)' ]]
 then
@@ -58,11 +59,21 @@ if [ -n "$DO_ACTIVATE" ]; then
 fi
 if [[ $RES -ne 0 ]]
   then
+=======
+# validating that each modified file has a valid schema, release notes, proper prefix & suffix
+python Tests/scripts/validate_files_structure.py
+
+if [[ $? -ne 0 ]]
+then
+>>>>>>> 9796c09436b0e20b9c2496c40e737b4d4922bc07
     echo "Please fix the aforementioned errors and then commit again"
     exit 1
 fi
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9796c09436b0e20b9c2496c40e737b4d4922bc07
 # prevent push to master
 if [ -z "$1"  ]; then
     protected_branch='master'
@@ -72,5 +83,8 @@ if [ -z "$1"  ]; then
         exit 1
     fi
 fi
+<<<<<<< HEAD
 
 echo ""
+=======
+>>>>>>> 9796c09436b0e20b9c2496c40e737b4d4922bc07

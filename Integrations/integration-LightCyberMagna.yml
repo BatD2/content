@@ -1,0 +1,583 @@
+commonfields:
+  id: LightCyber Magna
+  version: -1
+name: LightCyber Magna
+display: Palo Alto Magnifier
+category: Network Security
+image: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAyCAYAAAAweqkjAAAMjUlEQVR4Ac2YA3icXRbH72d/X732bm0jRu2tEdt22pk4maQT27aNhhOniGvb7vLu/8wma7RPmef5ZXzf/z2657xs9K+6e2iiMKVcuM45YniRkd+9+Ya+dxa8YeYb+NxdbhZwW903pTaqtGUTYKNI/x0/e2UhBF2cpuXOZ+t5cfzorQFxfIa2B5+l68WFyeWJj5//7hPA2I17j76/zS329FRNd/riO2MeBE5WF3IYygswFlbU5IE36MN3zhw9by5nKX7Se/bKDLbRNWpgtq7Ufe8F5FaP1EpjNhKI/H2BYk7WUixg898zYcQ8fR/B+2axUd6qMFhCRLxfwmbr+SN23LmMhQefC3HvRBilPWX6/NHXEKUuMuEpjTI8vlaBr3J0wXuityuMRK1ziujdJoyVLDTyg+v8+GJjbx5bo8gLOhbyoq75fL+vKZ+lE/D2hM3Q9uT2MYWFBS3HPwbMMCirYKqmN1e1d+XpTct5dutiniVZyte5OJIVgTfc6k2PVPnfjLD5Bn+1Vmpt1wbACLOwnODJ6r58p4clz2tfxHMgLL5Wnq8w94CrfflK+9BTeuL0vQaBmRbyVoHPIO71C0PtQWAfepZa2/lrwIjtbnGSyeoirhekDzcu4Llti3hIySppEV1oJOJFrX3KgBFbBTHNiMvXL4wW3Xwgeqikve9TwCq7Bieo2IXcmqYp4k6Ju6XC8hFj7um/5TO0RFzRJvhqQlX7d4Bl1Hd/vN45on+23hsQNlPHk2v5pxYDRkSUNM9abCz64zx9Xx5UtFbqShJnFKrDp2iI+CbXqG7AiJSazu/DlXcRb68mjFxBQmghstRo4FtG5B0CjAgvbtoyS8eXy1q48cTDctLAJ1duc7OGMF/aRAZgREhhoxyaU1qX1qNYfWlhI/Hhx22jC+JdE0rXavilNJELaEGv9CpNwAjn+BLBVA0fvsbJmWe2LJUKS29ejoB35dO1fLhtVIENYIRdTKEp/Z42utcrsdE5vnjeSwsjy2j7p9UBRqCpW0sLwm08KL9+HmCEbkBaKmXkbi8LuHGhNCPjUMuWmVLl96PvqgJGGAVnRUzWcKMYPd14/NS3gP1N2DwsThedpev5d+uMBDX1SKP+Jxe6pVS4Akb459QZTtfy4Cq2IdcLJb1jACN2usd3TFb341ZR6tLYInGivA1YT8SXmvg/Dy5o+A1gBLK3ioQZBWXGAkZIheGiiAXxdbPQnDA13+Q6qkkE6grtot4yPC9EFRk2WhBjyiXrACOMg7OCp2DRDS6R3YARaXVdk5B1d2Zq+3GfnE08H6JInHPSLj4VWbrGMfxCZn3PV4ClH+7+arVD2AVq7T3TKs0BIxjqz/0V5oc4vrACsKyGnnHKtsFXp2q6cRTIWqT9h4AJkssdyHLY7R9iylunAwbgztSKX6sJOIpkJmBEbHmr3HxDEWLRm4eXq0qDvqBzATcM0eVU13BcDdT0DH8KWGJVuyoFPlk9srTFAjCCwVVPNx+IGqroHPwIsOzGI+OUbIJv0sQUVdaiAxjhEFvkil1Rtb5e0TkwFrD85mNfrHeJPEPvW0fmOwBGHEgs1Zih7cPlrYQ8uV52JCMX861CW5yR/nyRsR9H0qQbBGV6kyfm6vuQJ2jt2xbheclGQVmbGGLm93qH0ksAI0ILGxfTDii+MKgsBYwwEGek/gZDyx6vxMOAAao/0zEX/oFGL/Tp2wEjrCLyvKgkbBHY8hwIImEpDTJcwVpILY90bfoNMRq7xFyECrxCCNh0bY8/4uCNBAxQTbGeBgtgWnmU03jkJ4ARuz3jO0iYRXjuIcCIwPz6TVQqKCMjipvmAUao+SSXU+Cr+Znwkp656Cjm8dDSVSPlxu/FGkUE9MNVDmF3MYWrOcUV2yhYBz4h1TQ9Fbf1fQIomCco2QTdxvtUv3QBA9hIkSVcTi64HF0q+QYwdBVfUXDP1PHBsSPgAQXreXDxGqznQB3Fy7XWoxWcIH9TycCuCwAjIGwuWYUOaqS3CmAAGZkdT1bcC/cCBmCx5l/DvdQpUBtNFiJI1Kv3/COWOQQY4ZNZs4VEI3sfoSD+BDBi04GoNioVaF2iASPgXkWcDlRuRl1HvJ5hhCx4MKlMDTACR4YHlQ+46CSs9xmgwP8a3cNFcqV7aoUNYIBqkCWC+vVPSeQCysrqniFZwAjcjWmk2wi7PBNqACPQPUxfZur/R9qEOO+wCmCETkBaBDL91ZpOEgaT3/lPfbthUGZBSk3HUse44uCFI0eRSUiOP2CEOLd+N1kG8fQc1vsNYMR+n6TaVxWGJkHAVO1Dz0HIf2r88IW/1huKGfpOQE7dXsAI87BcL+lJYOr/B5wW8wF1rUo42p4jgV6pr0Nc2zCUiSi46b+2OKOPlJWocYsAI1C5c2kRylTE3ql93knZSI572MArtefUUrX0nZZhwxevz1K0Dnrwv8w/mmEeaZUmgM7ILeg4YRnvf5wjaeFXcuFv1IRckFSeDhjDP7rNuXOJiej35Jp5/2Clf4TaIgTl73GOXqDHOXpSF786IxubiuzWFKV24kbiRMAY/SOSazoWaPilVixDzPyv7hXCR138kvgR/ynQObqZmzh1hD0nL34DGCH9NwqOnw9RIH+JDmF5kaRXGd2D0r+gmNt0VIYegdKLktt0TCmv+ah8fvNR2bymPrw+rlQoGVCKq2hTRBItQDaPA+wfoX8vTOfw+Q/ROYw9eubSh4C9DGev133aPOj4HWAvAv17YXKajk5eZhpwA73ZDMBehpZhO5PCjtXdgF2+XfNZ67C9+q2H3RMA+0/Qvxcmva6Lqv0TLVHqHMBehtpeA5uCjjXDgB09F/z9LMmKx/V9pisA+08wZIIBCprdWqfwNGWb4GwUysWAhRQ0rEJQ5shYiMtQozzaBs5+nksWMwt4gnZ6NmD5LcdnocdPwXfKneNL9wN2/8ngtzXHtT1yWhVKCzvX5h47F7IGQJihdX77qiHA2k8IbDOaaQBeXdrQbzb11NXsT2p79dxz25SqK4/s9bpxv3sMw2TUgBLwBGecPXqwOhTLcxVdgx+7JpTYoYj62EUX7EHNuow50b+krffHS2ExDC3TMQd8jrb6Au45FKM1EqC4Pkmq7tp19kbj92t7tTMbBsz3Vx/TFOW2KT4dvJzyo/p+c+P89pVDgPWej9QjYfV9JvFDl9O+D3FxEHm+5riOZWHH2hP1/aa5bJaOZydEhQIaxWYhfZ+GFTVOL23v/wDZuRQFdenWgzF5CtZBlTi4fw4BjzGk/lKYXK663DzgLn4zFlALlLrJNa4E4MLin7UM2su3nji4KVsi81wy7KrQMGChj4sOA7gy9Ps5rXKPJEMuS/ovxnyE57c6TnluA6ztpOC3GS1LbjO0xp27PRO8ARNl106GRR6g75fBGHcYNzrK8GivZBvcig62NKywUSrMMa7oF2hxNi8z87+GlugLwGC96C0HEwpah2O2FHWqXKk8ul8Ei3khlv7QOnxQHlYwKOxcPwRY5ynvH+a0yj9uHLBejOefZ0tkH3ScdF8JWMuQ/ZqM5oX3aEqSQNRRn8zqr22iCgxxj/0uphwVHDf30TovBQzuKpCzCqxGc/hjBP9TDC3K4rz6aWjDn+I+xTa/rNqJG1yiT1hH5ghqe9XEZT3bmgBdZEZWyzLedkKoIBl2Vodbr3Sf9h3ffzFuUrZkxaO6Xv1dgJUf2Xmktlc//ujZoI/h1ohibIChih+mGELffhyV+L5nepUQMOOQrNgVZgHnV9mHNiHAT6nahaYCTED5qejXbuDwl3FLrbCE0OsoIVd2eSTUnLl656vr95sXFXUqnS7tUT5S07upqaRb8UbfRV+56/dbJpb1rO0tO7Je8uDpwFddp52D8juW3Wo/Zb7s5LWUBSXdqicLOuQuFHTInL50u0qFBt5OBatAoUNM0WfWEfkTACOKW3s/wDHxQ7jsB4nV7V+4JJR+DVgJTgebqPzxsN5ngAmTy8bCqj/Mqu/5CDCiqT/h89ASp58F5PmNia7wHu+dGfaNOK/qo7LOxI8qeoK/q+zq/LCwte6z4o5DYw4mu30ZVlzyQVln8ke5Ld4/yW2J/hIwhsO4a6aOhztgrwNYVVec17xVziJMT94qzHqbMGn5EhOxnUNMsap3xmE1oO4QW6xvEpK3zyaqZOs8gwDHnR5J1vriPA1BUs1Gu+iynUZB2Q5MlFUjAyYD9jpAvO5FvLohNPz2eCa4BObV/9gwMHMjbsD8FBnug8HGA0lmpi/OWO8UV6KPmy+GeuIMI7wWYLDWdk+p3L/DPd79L3aE9c1ZCzWJAAAAAElFTkSuQmCC
+description: Magnifier Behavioral Analytics empowers organizations to quickly find and stop the stealthiest network threats.
+detaileddescription: By default only Confirmed indicators trigger as Demisto incidents.
+  Enable "Fetch Suspicious indicators" to also trigger "Suspicious" level LightCyber
+  indicators.
+configuration:
+- display: Server (e.g. https://3.4.5.6)
+  name: server
+  defaultvalue: ""
+  type: 0
+  required: true
+- display: Authentication
+  name: authentication
+  defaultvalue: ""
+  type: 9
+  required: true
+- display: Trust certifcate
+  name: insecure
+  defaultvalue: ""
+  type: 8
+  required: false
+- display: Fetch "Suspicious" indicators
+  name: fetchsuspicious
+  defaultvalue: ""
+  type: 8
+  required: false
+- display: Fetch incidents
+  name: isFetch
+  defaultvalue: ""
+  type: 8
+  required: false
+- display: Incident type
+  name: incidentType
+  defaultvalue: ""
+  type: 13
+  required: false
+- display: Incident type
+  name: incidentType
+  defaultvalue: ""
+  type: 13
+  required: false
+script:
+  script: |-
+    var fixUrl = function(base) {
+      res = base;
+      if (base && base[base.length - 1] != '/') {
+          res = res + '/';
+      }
+      return res;
+    };
+
+    var buildArgs = function(args) {
+        sArgs = Object.keys(args).map(function(key) {
+            return [key, args[key]].map(encodeURIComponent).join("=");
+        }).join("&");
+        if (sArgs) {
+            return '?' + sArgs;
+        } else {
+            return '';
+        }
+    };
+
+    var parseResponse = function(resp) {
+      if (resp.StatusCode === 200) {
+          try {
+              return JSON.parse(resp.Body);
+          } catch (e) {
+              return resp.Body;
+          }
+      } else {
+        err = resp.Status;
+        if (resp.Body) {
+            err += '\n' + resp.Body;
+        }
+        throw err;
+      }
+
+    };
+    var Base64 = {
+      _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+      encode: function(input) {
+        var output = "";
+        var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
+        var i = 0;
+        while (i < input.length) {
+          chr1 = input.charCodeAt(i++);
+          chr2 = input.charCodeAt(i++);
+          chr3 = input.charCodeAt(i++);
+          enc1 = chr1 >> 2;
+          enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+          enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+          enc4 = chr3 & 63;
+          if (isNaN(chr2)) {
+            enc3 = enc4 = 64;
+          } else if (isNaN(chr3)) {
+            enc4 = 64;
+          }
+          output = output + this._keyStr.charAt(enc1) + this._keyStr.charAt(enc2) + this._keyStr.charAt(enc3) + this._keyStr.charAt(enc4);
+        }
+
+        return output;
+      }
+    };
+
+
+    var loadCSV = function(csvData) {
+      var data = [];
+      var rows = csvData.split('\r\n');
+      var headers = rows[0].split(',');
+      for(var i = 1; i < rows.length; i++) {
+        var cells = rows[i].split(',');
+        if (cells.join('') === '') {
+            continue;
+        }
+        var obj = {};
+        for(var j = 0; j < cells.length; j++) {
+            obj[headers[j]] = cells[j];
+        }
+        data.push(obj);
+      }
+      return {results: data};
+    };
+
+    var doGet = function(qArgs, qParams, auth, raw, suffix) {
+      url = fixUrl(qParams.server) + suffix + buildArgs(qArgs);
+      res = http(
+          url,
+          {
+              Method: 'GET',
+              Headers: {'Authorization': [auth]}
+          },
+          qParams.insecure
+      );
+      if (raw) {
+          return res;
+      } else {
+          return parseResponse(res);
+      }
+    };
+
+    var doGetCSV = function(qArgs, qParams, auth, suffix) {
+      url = fixUrl(qParams.server) + suffix + encodeToURLQuery(qArgs);
+      resp = http(
+          url,
+          {
+              Method: 'GET',
+              Headers: {'Authorization': [auth]}
+          },
+          qParams.insecure
+      );
+
+      if (resp.StatusCode === 200) {
+        return loadCSV(resp.Body);
+      } else {
+        err = resp.Status;
+        if (resp.Body) {
+            err += '\n' + resp.Body;
+        }
+        throw err;
+      }
+    };
+
+    var doPost = function(body, qParams, auth, raw, suffix) {
+      var url = fixUrl(qParams.server) + suffix;
+      var res = http(
+          url, // URL
+          { // HTTP Request Headers
+              Method: 'POST',
+              Headers: {'Authorization': [auth]},
+              Body: ((body && body !== '') ? (JSON.stringify(body)) : '')
+          },
+          qParams.insecure
+      );
+      if (raw) {
+          return res;
+      } else {
+          return parseResponse(res);
+      }
+    };
+
+    var getIndicators = function(qArgs, qParams, auth) {
+        return doGetCSV(qArgs, qParams, auth, 'api/reports/indicators');
+    };
+
+    var getEntities = function(qArgs, qParams, auth) {
+        return doGetCSV(qArgs, qParams, auth, 'api/reports/entities');
+    };
+
+    var getIndicatorsByHostId = function(qArgs, qParams, auth, filterIds) {
+        if (!filterIds || filterIds.length === 0){
+            return {};
+        } else {
+            var indicators = getIndicators(qArgs, qParams, auth);
+            var indByHostId = {};
+            var hostId;
+            for(var i = 0; i < indicators.length; i++) {
+                hostId = indicators[i].HostId;
+                // Only include hostIds that appear in filterIds
+                if (filterIds.indexOf(hostId) >= 0) {
+                    if (indByHostId[hostId]) {
+                        indByHostId[hostId].push(indicators[i]);
+                    } else {
+                        indByHostId[hostId] = [indicators[i]];
+                    }
+                }
+            }
+            return indByHostId;
+        }
+    };
+
+
+    var createIncidentFromEntity = function(entity) {
+            var keys = Object.keys(entity);
+            var labels = [];
+            for (var i = 0; i<keys.length; i++) {
+                labels.push({'type': keys[i], 'value': entity[keys[i]]});
+            }
+
+            var eid = 'Unknown';
+            if (entity['Entity Type'] === 'host') {
+                if (entity.Hostname) {
+                    eid = entity.Hostname;
+                } else if (entity.IP) {
+                    eid = entity.IP;
+                } else {
+                    eid = entity['Entity ID'];
+                }
+            } else {
+                if (entity.Username) {
+                    eid = entity.Username;
+                } else {
+                    eid = entity['Entity ID'];
+                }
+            }
+
+            return {
+                "name": 'LightCyber: ' + entity['Entity Type'] + ' {' + eid + '} - ' + entity['Final Status'],
+                "labels": labels,
+                "details": JSON.stringify(entity),
+                "rawJSON": JSON.stringify(entity)
+            };
+        };
+
+    var getIncidents = function(qArgs, qParams, auth) {
+        var inc = [];
+        var last = getLastRun().highestLastDetected;
+        if (!last) {
+            last = '';
+        }
+        var data = getEntities(qArgs, qParams, auth);
+        if (data && data.results) {
+            var entities = data.results;
+            var highest = last;
+            var hostIds = {};
+            for (var i = 0; i < entities.length; i++) {
+                if ( entities[i].Status === 'Confirmed' || (qParams.fetchsuspicious && entities[i].Status === 'Suspicious') ) {
+                    if (entities[i]['Last Detected'] > last) {
+                        hostIds[entities[i]['Entity Id']] = '';
+                        inc.push(createIncidentFromEntity(entities[i]));
+                    }
+                    if (entities[i]['Last Detected'] > highest) {
+                        highest = entities[i]['Last Detected'];
+                    }
+                }
+            }
+            if (highest > last) {
+                setLastRun({'highestLastDetected': highest});
+            }
+
+            return JSON.stringify(inc);
+        } else {
+            return '';
+        }
+    };
+
+    delete args.using
+    delete args['using-brand']
+    // Currently API only supports Basic auth.
+    u = params.authentication.identifier;
+    p = params.authentication.password;
+    auth = 'Basic ' + Base64.encode(u + ':' + p);
+
+    // The command input arg holds the command sent from the user.
+    switch (command) {
+      // This is the call made when pressing the integration test button.
+      case 'test-module':
+          resp = doGet(args, params, auth, true, 'api/version');
+          if (resp.StatusCode === 200) {
+              return 'ok';
+          } else if (resp.Status) {
+              return resp.Status;
+          } else {
+              return resp;
+          }
+          break;
+      case 'fetch-incidents':
+          return getIncidents(args, params, auth);
+
+        case "lcm-host-opened-ports":
+            return doGetCSV(args, params, auth, "api/precompute/v1/open_ports_preset");
+        case "lcm-host-suspicious-artifacts":
+            return doGetCSV(args, params, auth, "api/precompute/v1/host_suspicious_artifacts");
+        case "lcm-host-processes":
+            return doGetCSV(args, params, auth, "api/precompute/v1/host_process_list");
+        case "lcm-host-loaded-modules":
+            return doGetCSV(args, params, auth, "api/precompute/v1/host_loaded_dlls");
+        case "lcm-host-processes-internet-connections":
+            return doGetCSV(args, params, auth, "api/precompute/v1/external_flows_with_md5");
+        case "lcm-host-autoruns":
+            return doGetCSV(args, params, auth, "api/precompute/v1/host_autoruns_preset");
+      case 'lcm-version':
+          return doGet(args, params, auth, false, 'api/version');
+      case 'lcm-indicators':
+          return getIndicators(args, params, auth);
+      case 'lcm-entities':
+          return getEntities(args, params, auth);
+      case 'lcm-hosts':
+          var data = doGet(args, params, auth, false, 'api/hosts');
+          return {results: data};
+      case 'lcm-domain':
+          return doGet(args, params, auth, false, 'api/domains/' + args.name);
+      case 'lcm-hostbyip':
+          var data = doGet(args, params, auth, false, 'api/hosts/by_ip/' + args.ip);
+          return {results: data};
+      case 'lcm-hostbyname':
+          var data = doGet(args, params, auth, false, 'api/hosts/by_name/' + args.name);
+          return {results: data};
+      case 'lcm-hostbyid':
+          var data = doGet(args, params, auth, false, 'api/hosts/' + args.id);
+          return {results: data};
+      case 'lcm-pathfinder-scan':
+          return doPost('', params, auth, false, 'api/hosts/' + args.id + '/scan');
+      case 'lcm-executablebymd5':
+          return doGet(args, params, auth, false, 'api/executables/' + args.md5);
+      case 'lcm-executablebyname':
+          return doGet(args, params, auth, false, 'api/executables/by_name/' + args.name);
+      case 'lcm-sandbox-report':
+          return doGet(args, params, auth, false, 'api/executables/' + args.md5 + '/report');
+      case 'lcm-host-artifacts':
+          return doGet(args, params, auth, false, 'api/hosts/' + args.id + '/archive');
+      case 'lcm-resolve-host':
+          return doPost(args.reason ? args.reason : '', params, auth, false, 'api/hosts/' + args.id + '/resolve');
+      case 'lcm-unresolve-host':
+          return doPost('', params, auth, false, 'api/hosts/' + args.id + '/unresolve');
+      case 'lcm-set-host-comment':
+          return doPost(args.comment, params, auth, false, 'api/hosts/' + args.id + '/comment');
+      case 'lcm-acknowledge-host':
+          return doPost('', params, auth, false, 'api/hosts/' + args.id + '/acknowledge');
+      case 'lcm-resolve-user':
+          return doPost(args.reason ? args.reason : '', params, auth, false, 'api/users/' + args.name + '/resolve');
+      case 'lcm-unresolve-user':
+          return doPost('', params, auth, false, 'api/users/' + args.name + '/unresolve');
+      case 'lcm-set-user-comment':
+          return doPost(args.comment, params, auth, false, 'api/users/' + args.name + '/comment');
+      case 'lcm-acknowledge-user':
+          return doPost('', params, auth, false, 'api/users/' + args.name + '/acknowledge');
+      case 'lcm-daily-report':
+          return doGet(args, params, auth, false, 'api/daily_report');
+      case 'lcm-indicatorsforentity':
+          return getIndicatorsByHostId(args, params, auth, args.id);
+      default:
+          return 'Unrecognized command: ' + command;
+    }
+  type: javascript
+  commands:
+  - name: lcm-version
+    arguments: []
+    description: Show product version
+  - name: lcm-entities
+    arguments: []
+    description: Show all entities reported in alerts
+  - name: lcm-indicators
+    arguments: []
+    description: Show all indicators reported in alerts
+  - name: lcm-hosts
+    arguments: []
+    description: Get a list of all hosts in the system which are a part of an indicator
+      (either source or destination).
+  - name: lcm-hostbyip
+    arguments:
+    - name: ip
+      required: true
+      default: true
+      description: IP address to find
+    description: Get a specific host record by IP address (similar to user "find host"
+      feature)
+  - name: lcm-hostbyname
+    arguments:
+    - name: name
+      required: true
+      default: true
+      description: Name to find
+    description: Get a specific host record by host name (similar to user "find host"
+      feature)
+  - name: lcm-pathfinder-scan
+    arguments:
+    - name: id
+      required: true
+      default: true
+      description: ID of host to scan
+    description: Initiate a manual pathfinder scan on the host.
+  - name: lcm-sandbox-report
+    arguments:
+    - name: md5
+      required: true
+      default: true
+      description: The md5 for which to retrieve the report
+    description: Download HTML sandbox report for the given MD5
+  - name: lcm-daily-report
+    arguments: []
+    description: Returns the daily report (normally sent by email)
+  - name: lcm-host-artifacts
+    arguments:
+    - name: id
+      required: true
+      default: true
+      description: ID of the host whose suspicious artifacts to download.
+    description: Download a zip containing the suspicious artifacts of the host.
+  - name: lcm-resolve-host
+    arguments:
+    - name: id
+      required: true
+      default: true
+      description: The host's ID
+    - name: reason
+      description: Reason for resolving the host
+    description: Resolve a host
+  - name: lcm-unresolve-host
+    arguments:
+    - name: id
+      required: true
+      default: true
+      description: The host's ID
+    description: Un-resolve a host
+  - name: lcm-set-host-comment
+    arguments:
+    - name: id
+      required: true
+      default: true
+      description: The host's ID
+    - name: comment
+      required: true
+      description: The new comment to set for the host
+    description: Change the host comment
+  - name: lcm-acknowledge-host
+    arguments:
+    - name: id
+      required: true
+      default: true
+      description: The host's ID
+    description: Acknowledge all changes on a host (resets purple track changes marks)
+  - name: lcm-resolve-user
+    arguments:
+    - name: name
+      required: true
+      default: true
+      description: User's name
+    - name: reason
+      description: Reason for resolving the user
+    description: Resolve a user
+  - name: lcm-unresolve-user
+    arguments:
+    - name: name
+      required: true
+      default: true
+      description: User's name
+    description: Un-resolve a user
+  - name: lcm-set-user-comment
+    arguments:
+    - name: name
+      required: true
+      default: true
+      description: User's name
+    - name: comment
+      required: true
+      description: The new comment to set for the user
+    description: Change the user's comment
+  - name: lcm-acknowledge-user
+    arguments:
+    - name: name
+      required: true
+      default: true
+      description: User's name
+    description: Acknowledge all changes on a user (resets purple track changes marks)
+  - name: lcm-domain
+    arguments:
+    - name: name
+      required: true
+      default: true
+      description: Domain name
+    description: Get a specific domain record by domain name
+  - name: lcm-executablebymd5
+    arguments:
+    - name: md5
+      required: true
+      default: true
+      description: Executable's md5
+    description: Get a specific executable record (by MD5)
+  - name: lcm-executablebyname
+    arguments:
+    - name: name
+      required: true
+      default: true
+      description: Executable's name
+    description: Get a specific executable record (by name)
+  - name: lcm-indicatorsforentity
+    arguments:
+    - name: id
+      required: true
+      default: true
+      description: Host ID
+    description: Get indicators for a specific detected host
+  - name: lcm-host-opened-ports
+    arguments:
+    - name: sort
+      description: How to sort the results
+    - name: host_id
+      required: true
+      description: Host id as presented in LightCyber Magna
+    description: Shows the used ports in this host
+  - name: lcm-host-suspicious-artifacts
+    arguments:
+    - name: sort
+      description: "Sort results by this column"
+      defaultValue: final_score
+    - name: host_id
+      required: true
+      default: true
+      description: Host id as presented in LightCyber Magna
+    description: Returns all the suspicious artifacts of this host
+  - name: lcm-host-processes
+    arguments:
+    - name: time
+      description: "Timestamp to search"
+    - name: sort
+      description: "Sort results by this column"
+      defaultValue: -score_e
+    - name: host_id
+      required: true
+      default: true
+      description: Host id as presented in LightCyber Magna
+    description: Returns all the running processes in the host
+  - name: lcm-host-loaded-modules
+    arguments:
+    - name: sort
+      description: "Sort results by this column"
+      defaultValue: final_score
+    - name: host_id
+      required: true
+      default: true
+      description: Host id as presented in LightCyber Magna
+    description: Returns all the modules of this host
+  - name: lcm-host-processes-internet-connections
+    arguments:
+    - name: time
+      description: "Timestamp to search"
+    - name: sort
+      description: "Sort results by this column"
+      defaultValue: process_sig
+    - name: src_host_id
+      required: true
+      default: true
+      description: Host id as presented in LightCyber Magna
+    description: Returns all the processes that established internet connection in
+      this host
+  - name: lcm-host-autoruns
+    arguments:
+    - name: sort
+      description: "Sort results by this column"
+      defaultValue: final_score
+    - name: host_id
+      required: true
+      default: true
+      description: Host id as presented in LightCyber Magna
+    description: Returns all installed autoruns programs in this host
+  isfetch: true
+hidden: false

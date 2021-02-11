@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+<<<<<<< HEAD
 _circle_token=$1
 [ -n "$2" ] && _branch="$2" || _branch="$(git branch  --show-current)"
 
@@ -16,11 +17,30 @@ post_data=$(cat <<-EOF
 EOF
 )
 
+=======
+_branch=$1
+_circle_token=$2
+
+trigger_build_url=https://circleci.com/api/v1/project/demisto/content/tree/${_branch}?circle-token=${_circle_token}
+
+post_data=$(cat <<EOF
+{
+  "build_parameters": {
+    "NIGHTLY": "true"
+  }
+}
+EOF)
+>>>>>>> 9796c09436b0e20b9c2496c40e737b4d4922bc07
 
 curl \
 --header "Accept: application/json" \
 --header "Content-Type: application/json" \
+<<<<<<< HEAD
 -k \
 --data "${post_data}" \
 --request POST ${trigger_build_url} \
 --user "$_circle_token:"
+=======
+--data "${post_data}" \
+--request POST ${trigger_build_url}
+>>>>>>> 9796c09436b0e20b9c2496c40e737b4d4922bc07

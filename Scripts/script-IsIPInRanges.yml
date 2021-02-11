@@ -1,0 +1,62 @@
+commonfields:
+  id: IsIPInRanges
+  version: -1
+name: IsIPInRanges
+script: |
+  var private_subnets = [
+    '172.16.0.0/12',
+    '10.0.0.0/8',
+    '198.18.0.0/15',
+    '192.168.0.0/16',
+    '100.64.0.0/10',
+    '192.0.0.0/24'
+  ];
+
+  var ip = args.ip;
+  var ipranges = argToList(args.ipRanges);
+
+  if (!ipranges || ipranges.length === 0) {
+      ipranges = private_subnets;
+  }
+
+  var isInRange = ipranges.some(function(iprange) {
+      return isIPInSubnet(ip, iprange.replace(/[\s]/g, ''));
+  });
+
+  var ipObj = {};
+  ipObj.Address = ip;
+  ipObj.InRange = isInRange ? 'yes' : 'no';
+
+  var ec = {'IP(val.Address == obj.Address)' : ipObj};
+
+  return {
+    Type: entryTypes.note,
+    Contents: isInRange ? 'yes' : 'no',
+    ContentsFormat: formats.text,
+    EntryContext: ec
+  };
+type: javascript
+tags:
+- ip
+- Condition
+comment: Returns yes if ip is in one of the ranges provided, returns no otherwise.
+enabled: true
+system: true
+args:
+- name: ip
+  required: true
+  default: true
+  description: IP to check in ranges
+- name: ipRanges
+  description: list of IP ranges to check the ip in (if list is not provided, will
+    use default list (e.g  192.16.0.0/16)
+outputs:
+- contextPath: "yes"
+  description: if given value is an IP range
+- contextPath: "no"
+  description: if given value is not a IP range
+- contextPath: IP.Address
+  description: The IP Address
+- contextPath: IP.InRange
+  description: Is the IP is in the input ranges? (could be 'yes' or 'no)
+scripttarget: 0

@@ -11,7 +11,10 @@ def main(image_id, confile):
     with open(image_id, 'r') as image_id_file:
         image_id_lines = image_id_file.readlines()
         image_id_lines = [line.strip('\n') for line in image_id_lines]
+<<<<<<< HEAD
         print(image_id_lines)
+=======
+>>>>>>> 9796c09436b0e20b9c2496c40e737b4d4922bc07
         id = image_id_lines[0]
         id = id.split()[0]
 

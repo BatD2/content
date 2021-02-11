@@ -1,0 +1,16 @@
+Google-Search-API
+pyping
+threatconnect
+psycopg2
+pdfx
+PyPDF2
+splunk-sdk
+PyYAML
+python-libnmap
+dxlclient
+dxlmarclient
+dxltieclient
+lxml
+langdetect
+pyVim
+pyVmomi

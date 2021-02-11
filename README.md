@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ![Content logo](xsoar_content_logo.png)
+=======
+![Content logo](demisto_content_logo.png)
+>>>>>>> 9796c09436b0e20b9c2496c40e737b4d4922bc07
 
 [![CircleCI](https://circleci.com/gh/demisto/content.svg?style=svg)](https://circleci.com/gh/demisto/content)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/demisto/content.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/demisto/content/context:python)
@@ -33,6 +37,7 @@ You can take your logic and the way you want to work and write your own scripts,
 The services and products you use can be online Cloud-based or on-premises setups, and we have tools to support more complex topologies such as when the product's subnet is firewalled off.
 
 ## Integrations
+<<<<<<< HEAD
 Integrations written in Javascript or Python enable the Cortex XSOAR Platform to orchestrate security and IT products. Each integration provides capabilities in the form of commands and each command usually reflects a product capability (API) and returns both a human readable and computer readable response.
 
 ## Docker
@@ -43,3 +48,21 @@ Cortex XSOAR Platform support flexible reports written in JSON. All of our stand
 
 ---
 Enjoy and feel free to reach out to us on the [DFIR Community Slack channel](https://www.demisto.com/community/).
+=======
+Integrations written in Javascript or Python enable the Demisto Platform to orchestrate security and IT products. Each integration provides capabilities in the form of commands and each command usually reflects a product capability (API) and returns both a human readable and computer readable response.
+
+## Reports
+Demisto Platform support flexible reports written in JSON. All of our standard reports calculating various incident statistics and metrics are stored in this repo.
+
+## Contributing Content
+For instructions about adding/modifying playbooks and scripts please see our [contributor guide](https://github.com/demisto/content/blob/master/CONTRIBUTING.md).
+
+Enjoy and feel free to reach out to us on the [DFIR Community Slack channel](https://www.demisto.com/community/), or at [info@demisto.com](mailto:info@demisto.com)
+
+## Git configuration
+Copy the pre-commit hook from .hooks to .git/hooks. Run the following command from the repository root:
+
+```sh
+cp .hooks/* .git/hooks
+```
+>>>>>>> 9796c09436b0e20b9c2496c40e737b4d4922bc07

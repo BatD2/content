@@ -70,6 +70,7 @@
     "description": "An object containing commonly used context (output) paths - file, ip url, domain, email, dbotscore (e.g. outputPaths.domain)",
     "name": "outputPaths",
     "arguments": []
+<<<<<<< HEAD
   },
   {
     "language": "powershell",
@@ -106,6 +107,8 @@
     "description": "An object containing commonly used context (output) paths - file, ip url, domain, email, dbotscore (e.g. outputPaths.domain)",
     "name": "outputPaths",
     "arguments": []
+=======
+>>>>>>> 9796c09436b0e20b9c2496c40e737b4d4922bc07
   }
 ]
 

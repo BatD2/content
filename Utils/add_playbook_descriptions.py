@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 from __future__ import print_function
+=======
+>>>>>>> 9796c09436b0e20b9c2496c40e737b4d4922bc07
 import sys
 
 
@@ -11,7 +14,11 @@ def add_descriptions(file_path, output_path):
         # if line has `type: start` or `type: title` or `type: end`
         # we want to create empty description (description: "") inside its task field with correct indentation
         if (line.find('type: start') > -1 or line.find('type: title') > -1 or line.find('type: end'))\
+<<<<<<< HEAD
                 and lines[i + 1 if i + 1 < len(lines) else i].find('task:') > -1:
+=======
+                and lines[i + 1].find('task:') > -1:
+>>>>>>> 9796c09436b0e20b9c2496c40e737b4d4922bc07
             inside_task_line = lines[i + 2]
             indentation = len(inside_task_line) - len(inside_task_line.lstrip(' '))
 
@@ -24,12 +31,17 @@ def add_descriptions(file_path, output_path):
 
 def main(argv):
     if len(argv) < 2:
+<<<<<<< HEAD
         print("Please provide <source playbook path>, <destination playbook path>")
+=======
+        print "Please provide <source playbook path>, <destination playbook path>"
+>>>>>>> 9796c09436b0e20b9c2496c40e737b4d4922bc07
         sys.exit(1)
 
     source_path = argv[0]
     destination_path = argv[1]
 
+<<<<<<< HEAD
     print("Starting...")
 
     add_descriptions(source_path, destination_path)
@@ -39,3 +51,15 @@ def main(argv):
 
 if __name__ == "__main__":
     main(sys.argv[1:])
+=======
+    print "Starting..."
+
+    add_descriptions(source_path, destination_path)
+
+    print "Finished"
+
+
+if __name__ == "__main__":
+   main(sys.argv[1:])
+
+>>>>>>> 9796c09436b0e20b9c2496c40e737b4d4922bc07

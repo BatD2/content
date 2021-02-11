@@ -1,6 +1,7 @@
 node_modules
 .DS_Store
 .idea
+<<<<<<< HEAD
 .vscode
 _site
 TestData/EmailWithNonUnicodeAttachmentName.eml
@@ -36,3 +37,6 @@ failed_unittests.txt
 Scripts/**/__init__.py
 Integrations/**/__init__.py
 Packs/**/__init__.py
+=======
+_site
+>>>>>>> 9796c09436b0e20b9c2496c40e737b4d4922bc07

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 set -e
 
 echo "checking for $4"
@@ -25,6 +26,20 @@ else
 
    ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${USER}@${PUBLIC_IP} "sudo chmod -R 755 /var/log/demisto"
    scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${USER}@${PUBLIC_IP}:/var/log/demisto/server.log $1 || echo "WARN: Failed downloading server.log"
+=======
+if [ -f ./Tests/is_build_failed.txt ]; then
+    echo "Run Tests has failed, not Destroying instance"
+    rm -rf ./Tests/is_build_failed.txt
+else
+   set -e
+
+   INSTANCE_ID=$(cat instance_ids)
+   USER="ec2-user"
+
+   # collect log file to artifacts
+   PUBLIC_IP=$(cat public_ip)
+   scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${USER}@${PUBLIC_IP}:/var/log/demisto/server.log $1
+>>>>>>> 9796c09436b0e20b9c2496c40e737b4d4922bc07
 
    #destroy instance
    echo "Terminating instance: ${INSTANCE_ID}"
